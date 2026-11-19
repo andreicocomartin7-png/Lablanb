@@ -1,1 +1,197 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Confession Letter 💗</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Georgia', serif;
+    background: linear-gradient(135deg, #ffd6e7, #f8b8d0);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.container {
+    background: #fffafa;
+    width: 100%;
+    max-width: 450px;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px #b45b8060;
+    text-align: center;
+}
+
+h1 {
+    color: #d94f87;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    color: #9b647b;
+    margin-bottom: 25px;
+    font-style: italic;
+}
+
+.question {
+    background: #ffe4ef;
+    color: #b83e70;
+    padding: 15px;
+    border-radius: 12px;
+    margin: 12px 0;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.question:hover {
+    background: #ffc5dd;
+    transform: scale(1.02);
+}
+
+.answer {
+    display: none;
+    padding: 15px;
+    color: #704052;
+    background: #fff0f5;
+    border-radius: 10px;
+    margin-top: 5px;
+    line-height: 1.6;
+}
+
+.final {
+    display: none;
+    margin-top: 25px;
+    padding: 20px;
+    background: #ffe4ef;
+    border-radius: 15px;
+    color: #c13c76;
+    line-height: 1.7;
+}
+
+button {
+    border: none;
+    background: #e879a5;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 25px;
+    cursor: pointer;
+    margin-top: 20px;
+    font-size: 15px;
+}
+
+button:hover {
+    background: #d94f87;
+}
+
+.heart {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="heart">💗</div>
+
+    <h1>Dear You...</h1>
+    <p class="subtitle">I have something to confess.</p>
+
+    <div class="question" onclick="showAnswer(0)">
+        Q1. Why am I writing this?
+    </div>
+    <div class="answer">
+        Because there's something I've been wanting to tell you,
+        but I never had the courage to say it.
+    </div>
+
+    <div class="question" onclick="showAnswer(1)">
+        Q2. Do I like you?
+    </div>
+    <div class="answer">
+        Yes. And I'm not joking. I genuinely like you.
+    </div>
+
+    <div class="question" onclick="showAnswer(2)">
+        Q3. What do I like about you?
+    </div>
+    <div class="answer">
+        Your personality, your smile, your laugh,
+        and all the little things that make you special.
+    </div>
+
+    <div class="question" onclick="showAnswer(3)">
+        Q4. Why you?
+    </div>
+    <div class="answer">
+        Because somehow, you make ordinary moments
+        feel more special.
+    </div>
+
+    <div class="question" onclick="showAnswer(4)">
+        Q5. What if you don't like me back?
+    </div>
+    <div class="answer">
+        That's okay. I will respect your feelings.
+        I don't want you to feel pressured.
+    </div>
+
+    <div class="question" onclick="showAnswer(5)">
+        Q6. What do I want from you?
+    </div>
+    <div class="answer">
+        Nothing complicated. I just want you to know
+        how I truly feel.
+    </div>
+
+    <button onclick="showFinal()">Open My Final Message 💌</button>
+
+    <div class="final" id="finalMessage">
+        <h2>My Confession 💗</h2>
+        <br>
+        I LIKE YOU.
+        <br><br>
+        Maybe you already noticed, or maybe
+        this is completely unexpected.
+        But I just wanted to be honest about
+        my feelings.
+        <br><br>
+        I don't know what will happen after this,
+        but I'm glad I finally told you.
+        <br><br>
+        <b>From someone who secretly admires you. ❤️</b>
+    </div>
+
+</div>
+
+<script>
+function showAnswer(number) {
+    const answers = document.querySelectorAll(".answer");
+    answers[number].style.display =
+        answers[number].style.display === "block"
+        ? "none" : "block";
+}
+
+function showFinal() {
+    const message = document.getElementById("finalMessage");
+    message.style.display = "block";
+    message.scrollIntoView({ behavior: "smooth" });
+}
+</script>
+
+</body>
+</html>
